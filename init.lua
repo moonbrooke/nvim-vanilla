@@ -3,6 +3,7 @@ require("keymaps")
 require("autocmds")
 require("terminal")
 require("tabs")
+require("statusline")
 
 -- Theme
 vim.g.tokyonight_style = "night"       -- available: "night", "storm"
