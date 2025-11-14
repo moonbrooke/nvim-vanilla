@@ -6,7 +6,7 @@ vim.cmd.colorscheme("unokai")
 
 -- Basic settings
 vim.opt.number = true                              -- Line numbers
-vim.opt.relativenumber = false                      -- Relative line numbers
+vim.opt.relativenumber = false                     -- Relative line numbers
 vim.opt.cursorline = true                          -- Highlight current line
 vim.opt.wrap = false                               -- Don't wrap lines
 vim.opt.scrolloff = 10                             -- Keep 10 lines above/below cursor 
@@ -34,7 +34,7 @@ vim.opt.showmatch = true                           -- Highlight matching bracket
 vim.opt.matchtime = 2                              -- How long to show matching bracket
 vim.opt.cmdheight = 1                              -- Command line height
 vim.opt.completeopt = "menuone,noinsert,noselect"  -- Completion options 
-vim.opt.showmode = false                           -- Don't show mode in command line 
+vim.opt.showmode = true                            -- Don't show mode in command line 
 vim.opt.pumheight = 10                             -- Popup menu height 
 vim.opt.pumblend = 10                              -- Popup menu transparency 
 vim.opt.winblend = 0                               -- Floating window transparency 
