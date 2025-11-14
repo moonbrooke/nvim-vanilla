@@ -3,6 +3,7 @@ vim.g.mapleader = " "                              -- Set leader key to space
 vim.g.maplocalleader = " "                         -- Set local leader key (NEW)
 
 -- Normal mode mappings
+vim.keymap.set("n", "<C-s>", ":w<CR>", { desc = "Save current file" })
 vim.keymap.set("n", "<Esc>", ":nohlsearch<CR>", { desc = "Clear search highlights" })
 
 -- Y to EOL
@@ -57,7 +58,7 @@ vim.keymap.set("v", "<", "<gv", { desc = "Indent left and reselect" })
 vim.keymap.set("v", ">", ">gv", { desc = "Indent right and reselect" })
 
 -- Quick file navigation
-vim.keymap.set("n", "\\", ":Explore<CR>", { desc = "Open file explorer" })
+vim.keymap.set("n", "\\", ":Rexplore<CR>", { desc = "Open file explorer" })
 vim.keymap.set("n", "<leader>ff", ":find ", { desc = "Find file" })
 
 -- Better J behavior
