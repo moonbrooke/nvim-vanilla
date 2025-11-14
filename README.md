@@ -1,6 +1,6 @@
 # Vanilla Neovim
 
-A usable Neovim config with no plugins.
+A usable vanilla Neovim config with no additional plugins.
 
 Requires Neovim 0.11.2 or later.
 
