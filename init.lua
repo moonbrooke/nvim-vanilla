@@ -6,4 +6,3 @@ require("statusline")
 require("colorscheme")
 require("lsp")
 require("autopair")
-

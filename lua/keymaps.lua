@@ -1,6 +1,6 @@
 -- Key mappings
-vim.g.mapleader = " "                              -- Set leader key to space
-vim.g.maplocalleader = " "                         -- Set local leader key (NEW)
+vim.g.mapleader = " "      -- Set leader key to space
+vim.g.maplocalleader = " " -- Set local leader key (NEW)
 
 -- Normal mode mappings
 vim.keymap.set("n", "<C-s>", ":w<CR>", { desc = "Save current file" })
@@ -83,4 +83,3 @@ vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
 
 -- Trigger autocompletion popup
 vim.keymap.set("i", "<C-x>", "<C-x><C-o>", { noremap = true, silent = true })
-

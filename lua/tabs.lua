@@ -1,6 +1,6 @@
 -- Tab display settings
-vim.opt.showtabline = 1  -- Always show tabline (0=never, 1=when multiple tabs, 2=always)
-vim.opt.tabline = ''     -- Use default tabline (empty string uses built-in)
+vim.opt.showtabline = 1 -- Always show tabline (0=never, 1=when multiple tabs, 2=always)
+vim.opt.tabline = ''    -- Use default tabline (empty string uses built-in)
 
 -- Transparent tabline appearance
 vim.cmd([[
@@ -71,4 +71,3 @@ local function smart_close_buffer()
     end
 end
 vim.keymap.set('n', '<leader>bd', smart_close_buffer, { desc = 'Smart close buffer/tab' })
-

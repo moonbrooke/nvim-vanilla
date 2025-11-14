@@ -39,4 +39,3 @@ end
 
 vim.opt.statusline = "%!v:lua.StatusLine()"
 -- vim.opt.statusline = "%#PmenuSel# %f %#Normal# %y %= %l:%c %p%%"
-
