@@ -75,3 +75,12 @@ vim.keymap.set("n", "<leader>pa", function()
     print("file:", path)
 end)
 
+-- LSP Keymaps
+vim.keymap.set("n", "gd", vim.lsp.buf.definition)
+vim.keymap.set("n", "K", vim.lsp.buf.hover)
+vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename)
+vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
+
+-- Trigger autocompletion popup
+vim.keymap.set("i", "<C-x>", "<C-x><C-o>", { noremap = true, silent = true })
+
