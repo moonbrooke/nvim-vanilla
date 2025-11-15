@@ -1,7 +1,6 @@
 require("options")
 require("keymaps")
 require("autocmds")
-require("tabs")
 require("statusline")
 require("colorscheme")
 require("lsp")
