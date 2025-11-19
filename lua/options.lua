@@ -99,6 +99,7 @@ if vim.fn.isdirectory(undodir) == 0 then
 end
 
 -- Netrw options
+vim.g.netrw_banner = 0
 vim.g.netrw_altv = 0
 vim.g.netrw_liststyle = 3
 
