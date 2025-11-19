@@ -98,6 +98,10 @@ if vim.fn.isdirectory(undodir) == 0 then
     vim.fn.mkdir(undodir, "p")
 end
 
+-- Netrw options
+vim.g.netrw_altv = 0
+vim.g.netrw_liststyle = 3
+
 -- Completion
 -- vim.g.autocomplete = true
 vim.opt.completeopt = "menuone,noinsert,noselect" -- Completion options
