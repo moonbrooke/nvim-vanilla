@@ -101,6 +101,7 @@ end
 -- Netrw options
 vim.g.netrw_altv = 0
 vim.g.netrw_liststyle = 3
+vim.g.netrw_winsize = 30
 
 -- Completion
 -- vim.g.autocomplete = true
