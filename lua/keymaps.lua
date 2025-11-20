@@ -58,28 +58,29 @@ vim.keymap.set("v", "<", "<gv", { desc = "Indent left and reselect" })
 vim.keymap.set("v", ">", ">gv", { desc = "Indent right and reselect" })
 
 -- Open netrw
--- vim.keymap.set("n", "\\", ":Rexplore<CR>", { desc = "Open file explorer" })
+vim.keymap.set("n", "\\", ":Rexplore<CR>", { desc = "Open file explorer" })
+
 -- Robust toggle for netrw on the left
-vim.keymap.set("n", "\\", function()
-    local netrw_open = false
-
-    -- Loop through all windows and see if any show netrw
-    for _, win in ipairs(vim.api.nvim_list_wins()) do
-        local buf = vim.api.nvim_win_get_buf(win)
-        local ft = vim.api.nvim_buf_get_option(buf, "filetype")
-        if ft == "netrw" then
-            -- Close the netrw window
-            vim.api.nvim_win_close(win, true)
-            netrw_open = true
-        end
-    end
-
-    -- If no netrw window was open, open it on the left
-    if not netrw_open then
-        vim.cmd("vert topleft Lexplore")
-        vim.cmd("vertical resize 30") -- fixed width
-    end
-end, { desc = "Toggle file explorer (left, 30 cols)" })
+-- vim.keymap.set("n", "\\", function()
+--     local netrw_open = false
+--
+--     -- Loop through all windows and see if any show netrw
+--     for _, win in ipairs(vim.api.nvim_list_wins()) do
+--         local buf = vim.api.nvim_win_get_buf(win)
+--         local ft = vim.api.nvim_buf_get_option(buf, "filetype")
+--         if ft == "netrw" then
+--             -- Close the netrw window
+--             vim.api.nvim_win_close(win, true)
+--             netrw_open = true
+--         end
+--     end
+--
+--     -- If no netrw window was open, open it on the left
+--     if not netrw_open then
+--         vim.cmd("vert topleft Lexplore")
+--         vim.cmd("vertical resize 30") -- fixed width
+--     end
+-- end, { desc = "Toggle file explorer (left, 30 cols)" })
 
 vim.keymap.set("n", "<leader>ff", ":find ", { desc = "Find file" })
 

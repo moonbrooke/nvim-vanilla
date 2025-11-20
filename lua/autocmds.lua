@@ -72,3 +72,8 @@ vim.api.nvim_create_autocmd("BufWritePre", {
         end
     end,
 })
+
+-- Open netrw at startup
+vim.api.nvim_create_autocmd("VimEnter", {
+    command = "Explore",
+})
