@@ -1,8 +1,8 @@
 require("options")
 require("keymaps")
 require("autocmds")
-require("statusline")
 require("colorscheme")
+require("statusline")
 require("diagnostic")
 require("autopair")
 
