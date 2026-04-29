@@ -58,7 +58,7 @@ vim.keymap.set("v", "<", "<gv", { desc = "Indent left and reselect" })
 vim.keymap.set("v", ">", ">gv", { desc = "Indent right and reselect" })
 
 -- Open netrw
-vim.keymap.set("n", "\\", ":Rexplore<CR>", { desc = "Open file explorer" })
+vim.keymap.set("n", "\\", ":Ex<CR>", { desc = "Open file explorer" })
 
 -- Robust toggle for netrw on the left
 -- vim.keymap.set("n", "\\", function()
