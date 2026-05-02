@@ -5,12 +5,35 @@ vim.api.nvim_create_autocmd("BufWritePre", {
     callback = function() vim.lsp.buf.format() end,
 })
 
--- Autocompletion
+-- Autocompletion, Inlay Hints, and Highlights
 vim.api.nvim_create_autocmd("LspAttach", {
     callback = function(ev)
         local client = vim.lsp.get_client_by_id(ev.data.client_id)
-        if client ~= nil and client:supports_method("textDocument/completion") then
+        if client == nil then return end
+
+        -- Enable built-in autocompletion
+        if client:supports_method("textDocument/completion") then
             vim.lsp.completion.enable(true, client.id, ev.buf, { autotrigger = true })
+        end
+
+        -- Enable built-in inlay hints
+        if client:supports_method("textDocument/inlayHint") then
+            vim.lsp.inlay_hint.enable(true, { bufnr = ev.buf })
+        end
+
+        -- Highlight word under cursor
+        if client:supports_method("textDocument/documentHighlight") then
+            local hl_augroup = vim.api.nvim_create_augroup("lsp_document_highlight", { clear = false })
+            vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
+                buffer = ev.buf,
+                group = hl_augroup,
+                callback = vim.lsp.buf.document_highlight,
+            })
+            vim.api.nvim_create_autocmd({ "CursorMoved", "CursorMovedI" }, {
+                buffer = ev.buf,
+                group = hl_augroup,
+                callback = vim.lsp.buf.clear_references,
+            })
         end
     end,
 })
